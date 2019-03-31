@@ -1,0 +1,37 @@
+<script>
+    function computerPlay(){
+        numResult = Math.floor(Math.random() * 3);
+        if (numResult === 0){
+            return 'Rock'
+        }
+        else if (numResult === 1) {
+            return 'Paper'
+        }
+        else{
+            return 'Scissors'
+        }
+    }
+    function playRound(playerSelection, computerSelection){
+        let lowerPlayerSelection = playerSelection.toLowerCase();
+        let playerRestString = lowerPlayerSelection.slice(1);
+        let firstLetter = playerSelection.charAt(0);
+        let upperFirstLetter = firstLetter.toUpperCase();
+        let corPlayerSelection = upperFirstLetter + playerRestString;
+
+        if (corPlayerSelection === computerSelection){
+            return 'Tie!'
+        }
+        else if (corPlayerSelection === 'Rock' && computerSelection === 'Scissors'){
+            return 'You Win! Rock beats Scissors'
+        }
+        else if (corPlayerSelection === 'Paper' && computerSelection === 'Rock'){
+            return 'You Win! Paper beats Rock'
+        }
+        else if (corPlayerSelection === 'Scissors' && computerSelection === 'Paper'){
+            return 'You Win! Scissors beats Paper'
+        }
+        else{
+            return 'You Lose! ' + computerSelection + ' beats ' + corPlayerSelection
+        }
+    }
+</script>
