@@ -117,4 +117,5 @@ h1, p{
 .footerText{
     display: inline-block;
     color: white;
+    font-size: 15px;
 }
