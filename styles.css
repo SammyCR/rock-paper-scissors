@@ -109,7 +109,7 @@ h1, p{
     margin-top: 0px;
 }
 .footer{
-    position: fixed;
+    position: absolute;;
     bottom: 0px;
     text-align: center;
     width: 100%;
