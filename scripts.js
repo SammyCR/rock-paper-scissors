@@ -77,6 +77,17 @@ function displayRoundText(result){
     roundTextDiv.appendChild(roundTextP);
 }
 
+
+function resetGame(){
+    playerScore = 0;
+    computerScore = 0;
+    displayScore();
+    let roundTextDiv = document.querySelector('#roundText');
+    roundTextDiv.innerHTML = "";
+    let wonDiv = document.querySelector('#won');
+    wonDiv.innerHTML = "";
+}
+
 let rock = document.querySelector('#rock');
 rock.addEventListener('click', () => { //Add event listener to rock button
     let result = playRound('Rock', computerPlay());
@@ -102,4 +113,9 @@ scissors.addEventListener('click', () => { //Add event listener to scissors butt
     displayScore();
     displayRoundText(result[0]);
     isGameOver();
+});
+
+let resetButton = document.querySelector('#reset');
+resetButton.addEventListener('click', () => {
+    resetGame();
 });

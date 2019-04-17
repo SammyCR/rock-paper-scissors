@@ -1,0 +1,36 @@
+.button{
+    display: inline;
+}
+#content{
+    text-align: center;
+}
+.bodyDiv{
+    display: block;
+}
+.pageTitle h1{
+    text-decoration: underline;
+}
+.scoreDiv{
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 150px;
+    border: 1px solid black;
+}
+h1, p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.scoreLabel{
+    text-decoration: underline;
+}
+#results{
+    height: 200px;
+}
+#reset{
+    margin-top: 20px;
+}
+.scoreNumber{
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
