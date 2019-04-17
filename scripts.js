@@ -43,6 +43,7 @@ function isGameOver(){
         wonDiv.innerHTML = "";
         let wonText = document.createElement('p');
         wonText.textContent = "You Won the Game!!!";
+        wonText.classList.add("wonP");
         wonDiv.appendChild(wonText);
     }
     else if(computerScore>=5 && playerScore<5){
@@ -50,6 +51,7 @@ function isGameOver(){
         wonDiv.innerHTML = "";
         let wonText = document.createElement('p');
         wonText.textContent = "You Lost the Game!";
+        wonText.classList.add("wonP");
         wonDiv.appendChild(wonText);
     }
 }
