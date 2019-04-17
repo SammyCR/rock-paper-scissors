@@ -108,3 +108,13 @@ h1, p{
     font-size: 120%;
     margin-top: 0px;
 }
+.footer{
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
+}
+.footerText{
+    display: inline-block;
+    color: white;
+}
