@@ -1,62 +1,32 @@
-<script>
-    function computerPlay(){
-        numResult = Math.floor(Math.random() * 3);
-        if (numResult === 0){
-            return 'Rock'
-        }
-        else if (numResult === 1) {
-            return 'Paper'
-        }
-        else{
-            return 'Scissors'
-        }
-    }
-    function playRound(playerSelection, computerSelection){
-        let lowerPlayerSelection = playerSelection.toLowerCase();
-        let playerRestString = lowerPlayerSelection.slice(1);
-        let firstLetter = playerSelection.charAt(0);
-        let upperFirstLetter = firstLetter.toUpperCase();
-        let corPlayerSelection = upperFirstLetter + playerRestString;
-
-        if (corPlayerSelection === computerSelection){
-            return 'Tie!'
-        }
-        else if (corPlayerSelection === 'Rock' && computerSelection === 'Scissors'){
-            return 'You Win! Rock beats Scissors'
-        }
-        else if (corPlayerSelection === 'Paper' && computerSelection === 'Rock'){
-            return 'You Win! Paper beats Rock'
-        }
-        else if (corPlayerSelection === 'Scissors' && computerSelection === 'Paper'){
-            return 'You Win! Scissors beats Paper'
-        }
-        else{
-            return 'You Lose! ' + computerSelection + ' beats ' + corPlayerSelection
-        }
-    }
-    function game(){
-        let gameOver = false;
-        let playerScore = 0;
-        let computerScore = 0;
-
-        while(gameOver === false){
-            let playerSelection = prompt("Select Rock, Paper, or Scissors: ");
-            let result = playRound(playerSelection, computerPlay());
-            if (result.charAt(4) === 'W'){
-                playerScore++;
-            }
-            else if (result.charAt(4) === 'L'){
-                computerScore++;
-            }
-            console.log(result);
-            if (playerScore >= 5){
-                console.log("You Win!");
-                break;
-            }
-            else if (computerScore >= 5){
-                console.log("You Lose!");
-                break;
-            }
-        }
-    }
-</script>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+    </head>
+    <body>
+        <div id="results">
+            <div id="playerScore">
+                <p>Player Score</p>
+                <p id="playerScoreNumber">0</p>
+            </div>
+            <div id="computerScore">
+                <p>Computer Score</p>
+                <p id="computerScoreNumber">0</p>
+            </div>
+            <div id="roundText"></div>
+            <div id="won"></div>
+        </div>
+        <div>
+            <div class="button">
+                <button id="rock">Rock</button>
+            </div>
+            <div class="button">
+                <button id="paper">Paper</button>
+            </div>
+            <div class="button">
+                <button id="scissors">Scissors</button>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="scripts.js"></script>
+</html>
