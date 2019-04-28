@@ -1,7 +1,7 @@
 body{
     background-color: rgb(34, 34, 34);
     position: relative;
-    min-height: 100vh;
+    min-height: 96vh;
 }
 .button{
     display: inline-block;
@@ -118,6 +118,7 @@ h1, p{
     height: 2.5rem;
     font-size: 15px;
     color: white;
+    margin-bottom: 0px;
 }
 .contentNoFooter{
     padding-bottom: 2.5rem;
